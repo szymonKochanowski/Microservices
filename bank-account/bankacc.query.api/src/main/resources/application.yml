@@ -13,9 +13,9 @@ spring:
     hibernate:
       ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/bank
+    url: jdbc:mysql://localhost:3306/bank?serverTimezone=UTC
     username: root
-    password: springbankRootPsw
+    password: ANAkonda92
 
 security:
   oauth2:
