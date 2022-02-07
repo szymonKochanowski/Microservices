@@ -29,3 +29,8 @@ spring:
           uri: http://localhost:9091/api/v1/openBankAccount
           predicates:
             - Path=/api/v1/openBankAccount
+
+        - id: bankAccCmdApi-DepositFunds
+          uri: http://localhost:9091/api/v1/depositFunds/**
+          predicates:
+            - Path=/api/v1/depositFunds/**
