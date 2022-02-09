@@ -34,3 +34,8 @@ spring:
           uri: http://localhost:9091/api/v1/depositFunds/**
           predicates:
             - Path=/api/v1/depositFunds/**
+
+        - id: bankAccCmdApi-WithdrawFunds
+          uri: http://localhost:9091/api/v1/withdrawFunds/**
+          predicates:
+            - Path=/api/v1/withdrawFunds/**
