@@ -1,0 +1,16 @@
+package com.springbank.bankacc.query.api.handlers;
+
+import com.springbank.bankacc.query.api.dto.AccountLookupResponse;
+import com.springbank.bankacc.query.api.queries.FindAccountByHolderIdQuery;
+import com.springbank.bankacc.query.api.queries.FindAccountByIdQuery;
+import com.springbank.bankacc.query.api.queries.FindAccountWithBalanceQuery;
+import com.springbank.bankacc.query.api.queries.FindAllAccountsQuery;
+
+public interface AccountQueryHandler {
+
+    AccountLookupResponse findAccountById(FindAccountByIdQuery query);
+    AccountLookupResponse findByHolderId(FindAccountByHolderIdQuery query);
+    AccountLookupResponse findAllAccounts(FindAllAccountsQuery query);
+    AccountLookupResponse findAccountsWithBalance(FindAccountWithBalanceQuery query);
+
+}
