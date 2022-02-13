@@ -36,11 +36,11 @@ public class AccountQueryHandlerImpl implements AccountQueryHandler {
 
     @QueryHandler
     @Override
-    public AccountLookupResponse findByHolderId(FindAccountByHolderIdQuery query) {
-        var bankAccount = accountRepository.findByAccountHolderId(query.getFindHolderId());
+    public AccountLookupResponse findAccountByHolderId(FindAccountByHolderIdQuery query) {
+        var bankAccount = accountRepository.findByAccountHolderId(query.getAccountHolderId());
         var response = bankAccount.isPresent()
                 ? new AccountLookupResponse("Bank Account Successfully Returned!", bankAccount.get())
-                : new AccountLookupResponse("No Bank Account Found for Holder Id - " + query.getFindHolderId());
+                : new AccountLookupResponse("No Bank Account Found for Holder Id - " + query.getAccountHolderId());
         return response;
     }
 
@@ -62,7 +62,7 @@ public class AccountQueryHandlerImpl implements AccountQueryHandler {
     @Override
     public AccountLookupResponse findAccountsWithBalance(FindAccountWithBalanceQuery query) {
         var bankAccount = query.getEqualityType() == EqualityType.GREATHER_THAN
-                ? accountRepository.findByBalanceGreatherThan(query.getBalance())
+                ? accountRepository.findByBalanceGreaterThan(query.getBalance())
                 : accountRepository.findByBalanceLessThan(query.getBalance());
 
         var respose = bankAccount != null && bankAccount.size() > 0

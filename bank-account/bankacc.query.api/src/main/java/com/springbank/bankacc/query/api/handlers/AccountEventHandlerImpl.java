@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 @Service
 @ProcessingGroup("bankaccount-group")
 public class AccountEventHandlerImpl implements AccountEventHandler {
+
     private final AccountRepository accountRepository;
 
     @Autowired

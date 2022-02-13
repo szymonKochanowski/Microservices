@@ -1,0 +1,1 @@
+Nie działa funkcjonalność pobrania konta za pomoca accountHolderId

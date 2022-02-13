@@ -2,16 +2,14 @@ package com.springbank.bankacc.query.api.dto;
 
 import com.springbank.bankacc.core.dto.BaseResponse;
 import com.springbank.bankacc.core.models.BankAccount;
-import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AccountLookupResponse extends BaseResponse {
 
-
-
     private List<BankAccount> accountList;
+
     public AccountLookupResponse(String message) {
         super(message);
     }
@@ -28,7 +26,7 @@ public class AccountLookupResponse extends BaseResponse {
     }
 
     public List<BankAccount> getAccountList() {
-        return accountList;
+        return this.accountList;
     }
 
     public void setAccountList(List<BankAccount> accountList) {

@@ -7,5 +7,5 @@ import lombok.Data;
 @AllArgsConstructor
 public class FindAccountByHolderIdQuery {
 
-    String findHolderId;
+    private String accountHolderId;
 }
