@@ -17,7 +17,7 @@
         <module name="bankacc.cmd.api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="api-gateway" target="11" />
       <module name="bank-account" target="1.5" />
       <module name="bankacc.cmd.api" target="11" />
